@@ -95,3 +95,13 @@ modifier onlyOwner() {
 ✔️`payable` allows function to receive Ether  
 ✔️`msg.value` holds the amount of Ether (in wei) that the user sent in  
 ✔️`mapping(address => bool)`实现账户注册  
+
+🐞有一个BUG，视频代码里bankManager是没有注册的，应当在`constructor`里面声明  
+
+```solidity
+constructor(){
+        ...
+        registeredMembers[msg.sender] = true;//register bankManager
+        ...
+}
+```
