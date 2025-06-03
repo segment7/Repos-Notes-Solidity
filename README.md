@@ -70,13 +70,28 @@ function getAllVoteCounts() public view returns (uint256[] memory) {
 
 ## DAY 5
 📑Day {05} in becoming a Solidity developer  
-✔️
-✔️
-✔️
+✔️函数里`return;`可一键退出    
+✔️`msg.sender`+`modifier`实现管理员权限功能    
+✔️自定义`modifier`作为函数通用修饰符    
+```solidity
+// Whoever deployed this contract becomes the owner
+constructor() {
+    owner = msg.sender; //a global variable that tells us who is calling the constructor function
+}
+
+// Modifier for owner-only functions
+modifier onlyOwner() {
+    require(msg.sender == owner, "Access denied: Only the owner can perform this action");
+    _;//配了修饰符onlyOwner的函数将在这里执行
+
+}
+```
+
+❓Logic advance: When approveWithdrawal, how make sure sum of withdrawalAllowances <= treasureAmount so that everyone can withdrawal at least what was allocated?  
 
 
 ## DAY 6
 📑Day {06} in becoming a Solidity developer  
-✔️
-✔️ 
-✔️
+✔️`payable` allows function to receive Ether  
+✔️`msg.value` holds the amount of Ether (in wei) that the user sent in  
+✔️`mapping(address => bool)`实现账户注册  
