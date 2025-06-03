@@ -2,7 +2,7 @@
 
 Welcome to my learning feedback repos for 30 Days of Solidity!
 
-Every day in june 2025.
+🥕Every day in june 2025.
 
 #BuildinPublic  
 #Solidity  
@@ -60,8 +60,8 @@ function getAllVoteCounts() public view returns (uint256[] memory) {
 
 ## DAY 4
 📑Day {04} in becoming a Solidity developer  
-✔️构造函数用于初始化合约设定`constructor() {}`  
-✔️`external`函数允许外部合约交互  
+✔️`constructor`函数用于初始化合约设定`constructor() {}`  
+✔️`external`函数仅允许外部合约与地址交互  
 ✔️`require(bool, string memory message)`设置函数前提与错误返回消息  
 ✔️所有合约的 Storage（状态变量）都是“零初始化”的  
 
@@ -71,8 +71,8 @@ function getAllVoteCounts() public view returns (uint256[] memory) {
 ## DAY 5
 📑Day {05} in becoming a Solidity developer  
 ✔️函数里`return;`可一键退出    
-✔️`msg.sender`+`modifier`实现管理员权限功能    
 ✔️自定义`modifier`作为函数通用修饰符    
+✔️`constructor (){}`+`msg.sender`+`modifier xxx(){}`实现管理员权限功能   
 ```solidity
 // Whoever deployed this contract becomes the owner
 constructor() {
