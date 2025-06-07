@@ -115,7 +115,11 @@ constructor(){
 ✔️common requirements:` _amount > 0` `_adress!= address(0)`    
 🤔`call()` syntax   
 `  (bool success, ) = <address payable>.call{value: _amount}("");`  
-`<address payable>` = e.g. `payable(msg.sender)` ` address payable xxx`  
+⚠️[自动回滚错误的函数机制 Error handling: Assert, Require, Revert and Exceptions](https://docs.soliditylang.org/en/latest/control-structures.html#error-handling-assert-require-revert-and-exceptions)
+
+### address payable
+e.g.   `payable(msg.sender)`   
+`address payable xxx`    
 ### nested mapping logic
 ```solidity
 mapping(address => mapping(address => uint256)) public debts
