@@ -140,3 +140,21 @@ debts[0xA][0xB] = 1.5 ether;
 ✔️`public string[]`初始长度为0    
 ✔️换算 1 ETH = 10^18 wei    
 
+
+## DAY 9
+📑Day {09} in becoming a Solidity developer  
+①纯血计算方程我用pure从小用到大   
+②牛顿算法估计平方根  
+③build two smart contracts that work together:  high-level function call(address casting)/ [low-level call](https://builder-hub.notion.site/Smart-Calculator-1d05720a23ef803a86e3e16d534b51ab)(Encode and Decode bytes )  
+```sol
+import "./ScientificCalculator.sol";//importing its source code
+ScientificCalculator sci = ScientificCalculator(scientificCalculatorAddress);
+uint256 result = sci.power(base, exponent);
+```
+
+### What is ABI?
+
+ABI stands for **Application Binary Interface**. Think of it as a contract’s "communication protocol" — it defines how data must be structured when one contract calls another.  
+
+When using high-level function calls (like `otherContract.someFunction()`), Solidity handles ABI encoding for you. But with low-level calls, **you must do it manually**.  
+
