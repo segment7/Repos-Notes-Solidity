@@ -1,6 +1,6 @@
 # 30 Days of Solidity — MY NOTES
 
-Welcome to my learning feedback repos for 30 Days of Solidity!
+Welcome to my learning feedback repo for 30 Days of Solidity!
 
 🥕Every day in june 2025.
 
@@ -158,3 +158,9 @@ ABI stands for **Application Binary Interface**. Think of it as a contract’s "
 
 When using high-level function calls (like `otherContract.someFunction()`), Solidity handles ABI encoding for you. But with low-level calls, **you must do it manually**.  
 
+## DAY 10
+📑Day {10} in becoming a Solidity developer  
+① `struct xxx {}`  
+② Declare and emit Events  
+③ `indexed` parameter makes it searchable in frontend(`indexed` <=3 per `event`)  
+④ creating a `storage` reference within a func  
