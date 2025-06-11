@@ -164,3 +164,11 @@ When using high-level function calls (like `otherContract.someFunction()`), Soli
 ② Declare and emit Events  
 ③ `indexed` parameter makes it searchable in frontend(`indexed` <=3 per `event`)  
 ④ creating a `storage` reference within a func  
+
+
+## DAY 11
+📑Day {11} in becoming a Solidity developer  
+① contract inheritance and use OpenZeppelin    
+② `address(this).balance`查询合约余额  
+③ npm-style package system  
+
