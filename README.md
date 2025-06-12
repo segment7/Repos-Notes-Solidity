@@ -172,3 +172,10 @@ When using high-level function calls (like `otherContract.someFunction()`), Soli
 ② `address(this).balance`查询合约余额  
 ③ npm-style package system  
 
+
+## DAY 12
+📑Day {12} in becoming a Solidity developer  
+① ERC-20: the 20th proposal in the Ethereum Request for Comments series    
+② 使用套娃方程，separation of logic    
+
+
