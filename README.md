@@ -187,8 +187,8 @@ When using high-level function calls (like `otherContract.someFunction()`), Soli
 ④ UX-friendly `receive() external payable {function();}` automatically calls func within  
 
 
-## DAY 15
-📑Day {15} **Advanced**  
+## DAY 14
+📑Day {14} **Advanced**  
 ① An `interface xxx {}` in Solidity is basically a contract with only function definitions — no logic, no storage, no state variables.  
 ② We use `abstract contract xxx {}` as foundations — they are not meant to be deployed directly.  
 ③ state variable `private` means only functions **within this contract** can read or modify it.  
@@ -213,5 +213,5 @@ for (uint i = 0; i < boxlist.length; i++) {
 ```
 
 
-## DAY 16
-📑Day {16} **Advanced**  
+## DAY 15
+📑Day {15} **Advanced**  
