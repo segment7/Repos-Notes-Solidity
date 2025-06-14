@@ -117,10 +117,10 @@ constructor(){
 `  (bool success, ) = <address payable>.call{value: _amount}("");`  
 ⚠️[自动回滚错误的函数机制 Error handling: Assert, Require, Revert and Exceptions](https://docs.soliditylang.org/en/latest/control-structures.html#error-handling-assert-require-revert-and-exceptions)
 
-### address payable
+> #### address payable
 e.g.   `payable(msg.sender)`   
 `address payable xxx`    
-### nested mapping logic
+> #### nested mapping logic
 ```solidity
 mapping(address => mapping(address => uint256)) public debts
 
@@ -152,7 +152,7 @@ ScientificCalculator sci = ScientificCalculator(scientificCalculatorAddress);
 uint256 result = sci.power(base, exponent);
 ```
 
-### What is ABI?
+#### What is ABI?
 
 ABI stands for **Application Binary Interface**. Think of it as a contract’s "communication protocol" — it defines how data must be structured when one contract calls another.  
 
@@ -169,7 +169,7 @@ When using high-level function calls (like `otherContract.someFunction()`), Soli
 ## DAY 11
 📑Day {11} in becoming a Solidity developer  
 ① contract inheritance and use OpenZeppelin    
-② `address(this).balance`查询合约余额  
+② ` address(this).balance`查询合约余额  
 ③ npm-style package system  
 
 
@@ -179,3 +179,39 @@ When using high-level function calls (like `otherContract.someFunction()`), Soli
 ② 使用套娃方程，separation of logic    
 
 
+## DAY 13
+📑Day {13} in becoming a Solidity developer  
+① `virtual`makes function overridable by child contract  
+② use` if () { require(false, ""); }` to deliberately set revert condition  
+③ after LOGICALLY-Changed ` override()`, fall back to the original function using `return super.funcName();`  
+④ UX-friendly `receive() external payable {function();}` automatically calls func within  
+
+
+## DAY 15
+📑Day {15} **Advanced**  
+① An `interface xxx {}` in Solidity is basically a contract with only function definitions — no logic, no storage, no state variables.  
+② We use `abstract contract xxx {}` as foundations — they are not meant to be deployed directly.  
+③ state variable `private` means only functions **within this contract** can read or modify it.  
+④ Array.pop() to remove the last item,  
+> #### 🤔 Interface Casting(address)  
+#### 函数内使用`storage`
+storage作为mapping默认存储位置，函数内使用`storage`可以作用于直接修改storage里的东西  
+在函数内部`address[] storage boxlist = userDepositBoxes[msg.sender];`  
+boxlist只是指向userDepositBoxes这个mapping的函数局部别名（alias）函数执行完毕后就消失，不会影响变量本名  
+
+#### 换尾删（swap-and-pop）
+```solidity
+for (uint i = 0; i < boxlist.length; i++) {
+
+    if (boxlist[i] == boxAddress) {
+        boxlist[i] = boxlist[boxlist.length - 1];//用结尾的值覆盖
+        boxlist.pop();//删结尾的值
+        break;
+    }
+
+}
+```
+
+
+## DAY 16
+📑Day {16} **Advanced**  
