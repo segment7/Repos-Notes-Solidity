@@ -213,5 +213,6 @@ for (uint i = 0; i < boxlist.length; i++) {
 ```
 
 
-## DAY 15
-📑Day {15} **Advanced**  
+## DAY N
+
+[ON NOTION](https://www.notion.so/MY-NOTES-30-Days-of-Solidity-214dd3ab5c1a8018851dd032b5a043a4?source=copy_link)
